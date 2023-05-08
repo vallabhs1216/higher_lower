@@ -1,5 +1,5 @@
-secret_num = 18
-guesses_allowed = 9
+secret_num = 6
+guesses_allowed = 5
 
 # List for already guessed integers
 already_guessed = []
