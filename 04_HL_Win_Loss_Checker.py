@@ -38,5 +38,5 @@ print("Thanks for playing")
 # Displays game stats with % values to the nearest whole number
 print()
 print("**** Game Statistics ****")
-print(f"Win: {rounds_won}: ({percent_win:.0f}%)\nLoss: {rounds_lost}: ({percent_lose:.0f}%)".format)
+print(f"Win: {rounds_won}: ({percent_win:.0f}%)\nLoss: {rounds_lost}: ({percent_lose:.0f}%)")
 print()
