@@ -17,7 +17,7 @@ def int_check(question, low=None, high=None, exit_code=None):
     while True:
 
         response = input(question)
-        if response == exit_code:
+        if response == exit_code or response == exit_code[0]:
             return response
 
         try:
@@ -91,7 +91,7 @@ def yes_no(question):
             print("Please answer yes / no")
 
 
-# Shows instructions 
+# Shows instructions
 def instructions():
     print("---------------------------")
     print("------ Instructions -------")
@@ -123,7 +123,7 @@ highest = int_check("High Number: ", lowest + 1)
 
 # Calculate Maximum guesses
 max_guess = math.log2(highest - lowest + 1)
-print(f"Max guesses: {max_guess:.0f}")
+print(f"Max guesses: {max_guess + 1:.0f}")
 
 # Ask user for # of rounds or <enter> for infinite rounds
 rounds_played = 0
@@ -156,7 +156,7 @@ while rounds_played < rounds:
 
     rounds_played += 1
 
-    guesses_allowed = max_guess
+    guesses_allowed = max_guess + 1
 
     # Computer chooses random integer from chosen range.
     secret_num = random.randint(lowest, highest + 0)
@@ -172,11 +172,12 @@ while rounds_played < rounds:
     while guess != secret_num and guesses_left >= 0:
 
         # Checks for guess
-        guess = int_check("Guess: ", lowest, highest, "xxx")
+        guess = int_check("Guess: ", lowest, highest)
 
-        if guess == "xxx" or "x":
+        if guess == "xxx":
             rounds_played = rounds
             break
+
         # Checks for duplicate guess
         if guess in already_guessed:
             print("You already guessed that number! Please try again"
