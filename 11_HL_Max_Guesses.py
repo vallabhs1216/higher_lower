@@ -12,3 +12,10 @@ for item in range(0, 4):
     print(f"Max Guesses: {max_guesses}")
 
     print()
+
+
+
+
+
+max_guess = math.log2(highest - lowest + 1)
+print(f"Max guesses: {max_guess:.0f}")
