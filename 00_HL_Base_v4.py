@@ -160,7 +160,6 @@ while rounds_played < rounds:
 
     # Computer chooses random integer from chosen range.
     secret_num = random.randint(lowest, highest + 0)
-    print(secret_num)
 
     # List for already guessed integers
     guess = []
@@ -209,7 +208,7 @@ while rounds_played < rounds:
             print("Congratulations you got it on your first guess!")
         else:
             print("Well done you got the secret number correct")
-    if guesses_left <= 0:
+    if guesses_left <= -1:
         print("Sorry you didn't get it in the amount of guesses given.")
 
 print("Thanks for playing")
