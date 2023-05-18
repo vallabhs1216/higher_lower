@@ -17,7 +17,7 @@ def int_check(question, low=None, high=None, exit_code=None):
     while True:
 
         response = input(question)
-        if response == exit_code or response == exit_code[0]:
+        if response == exit_code:
             return response
 
         try:
@@ -160,7 +160,6 @@ while rounds_played < rounds:
 
     # Computer chooses random integer from chosen range.
     secret_num = random.randint(lowest, highest + 0)
-    print(secret_num)
 
     # List for already guessed integers
     guess = []

@@ -174,7 +174,7 @@ while rounds_played < rounds:
         # Checks for guess
         guess = int_check("Guess: ", lowest, highest, "xxx")
 
-        if guess == "xxx" or "x":
+        if guess == "xxx":
             rounds_played = rounds
             break
         # Checks for duplicate guess
